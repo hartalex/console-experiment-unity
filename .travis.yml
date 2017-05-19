@@ -2,7 +2,7 @@ before_install:
     - nvm install node
     - sudo apt-get install lib32gcc1 lib32stdc++6
 script:
-    - wget http://beta.unity3d.com/download/6a86e542cf5c/unity-editor_amd64-5.6.1xf1Linux.deb
+    - if [ ! -f unity-editor_amd64-5.6.1xf1Linux.deb ]; then wget http://beta.unity3d.com/download/6a86e542cf5c/unity-editor_amd64-5.6.1xf1Linux.deb; fi
     - sudo dpkg -i unity-editor_amd64-5.6.1xf1Linux.deb
     - /opt/Unity/Editor/Unity --batchmode -quit -projectPath ~/build/console-experiment-unity -buildLinux64Player ~/build/output/ceu.app
 cache:
