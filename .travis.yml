@@ -1,0 +1,2 @@
+script:
+    - /opt/Unity/Editor/Unity --batchmode -quit -projectPath ~/build/console-experiment-unity -buildLinux64Player ~/build/output/ceu.app
