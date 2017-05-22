@@ -7,3 +7,5 @@ script:
     - /opt/Unity/Editor/Unity -batchmode -nographics -quit -logFile ~/build/unity.log -projectPath ~/build/hartalex/console-experiment-unity -buildLinux32Player ~/build/output/ceu.app
 after_failure:
     - cat ~/build/unity.log
+notifications:
+    slack: hartcode:GqPCaLxnPqXfPJBMjJbEvG81
